@@ -72,8 +72,6 @@ def __usage(arg):
 	parser.add_argument("-c", "--thread", dest="threadNum", help="the number of thread", type=int, default=20)
 	parser.add_argument("-t", "--timeout", dest="timeout", help="the number of timeout", type=float, default=0.1)
 	parser.add_argument("-p", "--port", dest="scanPort", help="the port of ssh", type=int, default=22)
-	# add ssh scan
-	# parser.add_argument("-s", "--ssh", action='store_true', help="ssh scan", dest="sshScan")
 	args = parser.parse_args(arg)
 	return args
 

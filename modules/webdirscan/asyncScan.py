@@ -72,11 +72,9 @@ def __usage(arg):
 	description = "webscan is a simple web scan tools"
 	parser = argparse.ArgumentParser(description=description)
 	parser.add_argument("scanUrl", help="the website to be scan", type=str)
-	# parser.add_argument("website", help="the website to be scan", type=str)
 	parser.add_argument("-d", "--dict", dest="scanDict", help="the dictionary for scan", type=str, default="dict.txt")
 	parser.add_argument("-c", "--concurrent", dest="concurrentNum", help="concurrent number", type=int, default=20)
-	# add ssh scan
-	# parser.add_argument("-s", "--ssh", action='store_true', help="ssh scan", dest="sshScan")
+
 	args = parser.parse_args(arg)
 	return args
 
