@@ -19,12 +19,16 @@ def usage():
 if __name__ == '__main__':
 	if len(argv) <= 1:
 		print(usage())
+		exit()
 
 	func = argv[1]
-	if func in ['dirscan', 'sshscan']:
-		eval(func + '(' + str(argv[2:]) + ')')
+
+	if func == "dir":
+		dirscan(argv[2:])
+	elif func == "ssh":
+		sshscan(argv[2:])
 	else:
 		if '-h' in argv or '--help' in argv:
 			print(usage())
 			exit()
-		print(func + " don't kown.\nyou should input ['dirscan', 'sshscan']")
+		print(func + " don't kown.\nyou should input ['dir', 'ssh']")
