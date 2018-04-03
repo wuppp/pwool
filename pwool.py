@@ -11,24 +11,24 @@ from sys import argv
 from modules.webdirscan.asyncScan import dirscan
 from modules.sshscan.sshscan import sshscan
 
-
 def usage():
-	usages = """usage: pwool.py type [-h]"""
-	return usages
+    usages = """usage: pwool.py type [-h]"""
+    return usages
+
 
 if __name__ == '__main__':
-	if len(argv) <= 1:
-		print(usage())
-		exit()
+    if len(argv) <= 1:
+        print(usage())
+        exit()
 
-	func = argv[1]
+    func = argv[1]
 
-	if func == "dir":
-		dirscan(argv[2:])
-	elif func == "ssh":
-		sshscan(argv[2:])
-	else:
-		if '-h' in argv or '--help' in argv:
-			print(usage())
-			exit()
-		print(func + " don't kown.\nyou should input ['dir', 'ssh']")
+    if func == "dir":
+        dirscan(argv[2:])
+    elif func == "ssh":
+        sshscan(argv[2:])
+    else:
+        if '-h' in argv or '--help' in argv:
+            print(usage())
+            exit()
+        print(func + " don't kown.\nyou should input ['dir', 'ssh']")
