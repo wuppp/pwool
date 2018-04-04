@@ -49,7 +49,7 @@ class AsyncScan:
             await self.queue.put(urlparse.urljoin(self.target_site, path))
 
     async def get_path(self):
-        async with aiofiles.open(self.dictionary_path) as file:
+        async with aiofiles.open(self.dictionary_path, encoding="utf-8") as file:
             async for line in file:
                 line = line.strip()
                 if line == "":
