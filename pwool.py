@@ -1,11 +1,4 @@
-# -*- coding:utf-8 -*-
-
-"""
-@file: pwool.py
-@author: Roc木木
-@time: 17-4-24 下午11:38
-"""
-
+#!/usr/local/bin/env python3
 
 from modules.webdirscan.asyncScan import dir_scan
 from modules.sshscan.sshscan import sshscan
@@ -29,5 +22,7 @@ if __name__ == '__main__':
     elif func == "ssh":
         sshscan(sys.argv[2:])
     else:
-        usage() if '-h' in sys.argv or '--help' in sys.argv else print(func + " don't kown.\n"
-                                                                              "you should input ['dir', 'ssh']")
+        if '-h' in sys.argv or '--help' in sys.argv:
+            usage()
+        else:
+            print(func + " don't kown.\nyou should input ['dir', 'ssh']")

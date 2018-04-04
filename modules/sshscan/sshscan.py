@@ -1,11 +1,3 @@
-# -*- coding:utf-8 -*-
-
-'''
-@file: sshscan.py
-@author: Roc木木
-@time: 17-4-28 下午2:40
-'''
-
 import paramiko, argparse, threading, queue
 
 

@@ -1,11 +1,3 @@
-# -*- coding:utf-8 -*-
-
-"""
-@file: asyncScan.py
-@author: Roc木木
-@time: 17-4-25 下午6:46
-"""
-
 from urllib import parse as urlparse
 import aiofiles
 import argparse
